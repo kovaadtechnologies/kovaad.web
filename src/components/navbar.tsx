@@ -1,10 +1,10 @@
 "use client";
 import React, {useState} from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {navItems} from "@/app/lib/AppConstants";
 import Link from "next/link";
 
-const logoPath = "./logo.svg";
+const logoPath = "/logo.svg";
 
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -50,11 +50,11 @@ export const Navbar = () => {
                         />
                         <span className="md:ml-2 ml-1 md:text-5xl text-2xl font-bold whitespace-nowrap text-kovaad-blue">Ko Vaad</span>
                     </div>
-                    <div className="text-kovaad-blue text-xl px-5 ">Expanding Communication</div>
+                    <div className="text-kovaad-blue md:block hidden text-xl pl-5 ">Expanding Communication</div>
                 </div>
 
-                <div className="block ">
-                    <button className="bg-kovaad-bg-hover-blue hover:bg-blue-700 rounded-xl text-white font-bold py-5 px-10">
+                <div className="block md:text-lg text-xs">
+                    <button className="bg-kovaad-bg-hover-blue hover:bg-blue-700 rounded-xl text-white font-bold py-2 px-3 md:py-5 md:px-10">
                         Get Started
                     </button>
                 </div>
@@ -88,7 +88,7 @@ export const Navbar = () => {
                         menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
                     }`}
                 >
-                    {navItems.map((navItem: any, idx: number) => (
+                    {navItems.map((navItem, idx: number) => (
                         <li key={`link-${idx}`} className="relative items-center flex py-3 font-wixFont hover:text-blue-500">
                             <Link href={navItem.link}>
                                 <span className="!cursor-pointer text-3xl">{navItem.name}</span>
