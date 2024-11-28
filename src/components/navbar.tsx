@@ -41,7 +41,7 @@ export const Navbar = () => {
                     {!menuOpen && <span className="mx-auto hidden md:block text-xl ml-2">Menu</span>}
                 </button>
 
-                <div className="flex items-center text-kovaad-blue text-2xl">
+                <div className="flex items-center text-kovaad-blue text-2xl h-16 ">
                     <Image
                         src={logoPath}
                         alt="Your Company Logo"
@@ -49,7 +49,7 @@ export const Navbar = () => {
                         height={60}
                         className="md:w-full md:h-full w-[50%] h-[50%]"
                     />
-                    <span className="md:ml-2 ml-1 md:text-3xl text-xl font-bold text-kovaad-blue">Ko Vaad</span>
+                    <span className="md:ml-2 ml-1 md:text-3xl text-xl font-bold whitespace-nowrap text-kovaad-blue">Ko Vaad</span>
                 </div>
 
                 <div className="block ">
